@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DocWell Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body class="contact-dark">
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo"><img src="../imagenes/logo.png" alt="Logo DocWell Company" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="soluciones.html">Soluciones</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p class="slogan">Estamos para ayudarte. ¡Contáctanos!</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <section class="main-section card contacto-info-vertical">
+            <h2>Datos de contacto</h2>
+            <p>Si prefieres, también puedes contactarnos directamente:</p>
+            <ul class="contact-list">
+                <li><strong>Director Comercial:</strong> Pablo Andrada</li>
+                <li><i class="fa-solid fa-phone"></i> +54 9 11 7179-0518</li>
+                <li><i class="fa-solid fa-envelope"></i> pablo.andrada@dwc.ar</li>
+                <li><i class="fa-solid fa-globe"></i> <a href="http://www.dwc.ar" target="_blank">www.dwc.ar</a></li>
+            </ul>
+        </section>
+        <section class="main-section card contacto-form-vertical">
+            <h2>Envíanos un mensaje</h2>
+            <form action="https://formspree.io/f/YOUR_EMAIL" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Tu Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" required oninput="document.getElementById('charCount').textContent = this.value.length + '/500'"></textarea>
+                    <span class="char-count" id="charCount">0/500</span>
+                </div>
+                <button type="submit" class="btn primary">Enviar Mensaje</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>DocWell Company</strong> — Innovaciones que conectan, soluciones que trascienden.</p>
+
+            <small>&copy; 2025 DocWell Company. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
