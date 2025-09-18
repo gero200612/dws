@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones de Optimización | DocWell Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/soluciones.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="nav-container container">
+            <a href="../index.html" class="brand"><img src="../imagenes/logo.png" alt="Logo DocWell Company" class="logo-img"></a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="soluciones.html">Soluciones</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Soluciones de Optimización para Cada Proceso</h1>
+            <p class="slogan">Automatización y análisis inteligente para seguridad, logística, producción y experiencia del cliente.</p>
+        </div>
+    </header>
+    <main>
+        <section class="solution-section reveal">
+            <div class="container">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-user-shield"></i> Seguridad</h2>
+                    <p>Prevención y detección en tiempo real para proteger tus activos y personal. Utiliza tus cámaras de seguridad existentes para una vigilancia proactiva y automatizada.</p>
+                    <ul class="feature-list">
+                        <li>Alertas ante intrusiones, caídas o presencia en zonas restringidas.</li>
+                        <li>Integración de cámaras y sensores existentes.</li>
+                        <li>Análisis de movimiento y detección de amenazas en tiempo real.</li>
+                    </ul>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/seguridad.png" alt="Imagen abstracta de seguridad operativa" class="solution-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="solution-section plain-bg reveal">
+            <div class="container reverse-on-mobile">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-truck"></i> Logística</h2>
+                    <p>Optimiza la gestión de tus activos móviles y flotas. Transforma la operación logística con seguimiento en tiempo real y análisis inteligente.</p>
+                    <ul class="feature-list">
+                        <li>Tracking y optimización de flotas.</li>
+                        <li>Monitoreo de inventarios y gestión de carga en tiempo real.</li>
+                        <li>Análisis de rutas para una mayor eficiencia.</li>
+                    </ul>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/logistica.png" alt="Imagen abstracta de logística" class="solution-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="solution-section reveal">
+            <div class="container">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-industry"></i> Eficiencia Productiva</h2>
+                    <p>Convierte tus datos visuales en decisiones estratégicas. Identifica oportunidades de mejora y mantenimientos predictivos en tu línea de producción.</p>
+                    <ul class="feature-list">
+                        <li>Detección de interrupciones y gestión de averías.</li>
+                        <li>Control de lubricación y detección de fugas.</li>
+                        <li>Monitoreo de procesos y medición del tiempo de ciclo.</li>
+                    </ul>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/eficiencia.png" alt="Imagen abstracta de eficiencia productiva" class="solution-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="solution-section plain-bg reveal">
+            <div class="container reverse-on-mobile">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-users"></i> Experiencia del Cliente</h2>
+                    <p>Analiza el comportamiento del público para optimizar la atención en tus puntos de venta o centros de servicio.</p>
+                    <ul class="feature-list">
+                        <li>Conteo de personas y gestión de colas.</li>
+                        <li>Análisis de recorridos y lugares de detención.</li>
+                        <li>Medición de tiempos de espera.</li>
+                    </ul>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/experiencia.png" alt="Imagen abstracta de experiencia del cliente" class="solution-image">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>DocWell Company</strong> — Innovaciones que conectan, soluciones que trascienden.</p>
+
+            <small>&copy; 2025 DocWell Company. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-toggle');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn && menuBtn.addEventListener('click', () => {
+          const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+          menuBtn.setAttribute('aria-expanded', String(!expanded));
+          navLinks.classList.toggle('show');
+        });
+        // Reveal on scroll (IntersectionObserver)
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

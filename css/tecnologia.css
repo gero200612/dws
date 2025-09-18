@@ -1,0 +1,104 @@
+@import url('css/index.css');
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3em;
+    align-items: center;
+}
+.tech-text h2 {
+    text-align: left;
+    margin-top: 0;
+}
+.tech-text p {
+    text-align: left;
+    max-width: none;
+    margin-bottom: 1.5em;
+}
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-top: 2em;
+}
+.capability-item {
+    background: var(--light-bg);
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+.capability-item i {
+    font-size: 2.5em;
+    color: var(--secondary);
+    margin-bottom: 0.5em;
+}
+.capability-item h4 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: var(--primary);
+}
+.capability-item p {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+/* Accordion (FAQ) */
+.accordion {
+    max-width: 900px;
+    margin: 2em auto;
+}
+.accordion-item {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.accordion-header {
+    padding: 1.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: relative;
+    color: var(--primary);
+}
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: var(--secondary);
+    transition: transform 0.3s;
+}
+.accordion-item.open .accordion-header::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 1.5em;
+}
+.accordion-item.open .accordion-content {
+    max-height: 200px; /* Ajusta según el contenido */
+    padding: 0 1.5em 1.5em 1.5em;
+}
+.accordion-content p {
+    margin: 0;
+    text-align: left;
+    font-size: 1em;
+}
+
+@media (max-width: 900px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+    }
+    .tech-text h2, .tech-text p {
+        text-align: center;
+    }
+}
