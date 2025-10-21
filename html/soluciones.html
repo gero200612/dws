@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Integrales | DocWell Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/soluciones.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="nav-container container">
+            <a href="../index.html" class="brand"><img src="../imagenes/logo.png" alt="Logo DocWell Company" class="logo-img"></a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="soluciones.html">Soluciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <h1>Soluciones que Transforman Procesos y Experiencias</h1>
+            <p class="slogan">Impulsamos su crecimiento de manera más eficiente, segura e innovadora con nuestra consultoría integral en tecnología.</p>
+        </div>
+    </header>
+    <main>
+
+        <section class="solution-section plain-bg reveal">
+            <div class="container grid-2-cols">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-code-branch"></i> 1. Consultoría y Gestión de Documentos</h2>
+                    <p>Ofrecemos consultoría estratégica en TI e infraestructura, junto con soluciones para la digitalización y gestión eficiente de documentos, desde el <strong>OnBoarding</strong> hasta la <strong>firma electrónica</strong>.</p>
+                    <ul class="feature-list">
+                        <li>Consultoría estratégica TI e Infraestructura.</li>
+                        <li>OnBoarding digital.</li>
+                        <li>Portal / Tótem de Autogestión.</li>
+                        <li>Firma Electrónica y Digital con validez legal.</li>
+                        <li>Gestión & Workflow Documental.</li>
+                        <li>Legajo/expediente digital y Portal de proveedores.</li>
+                    </ul>
+                    <a href="contacto.html" class="btn primary">Solicitar Consultoría Integral</a>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/desarrollo-automatizacion.png" alt="Ilustración de desarrollo de software y automatización de procesos" class="solution-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section pattern-bg reveal">
+            <div class="container reverse-on-mobile grid-2-cols">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-shield-alt"></i> 2. Seguridad y Monitoreo Inteligente</h2>
+                    <p>Implementamos soluciones robustas de <strong>ciberseguridad</strong> y <strong>análisis de riesgos</strong>, incluyendo <strong>monitoreo inteligente</strong> y <strong>autentificación biométrica</strong> para proteger sus sistemas y datos.</p>
+                    <ul class="feature-list">
+                        <li>Ciberseguridad.</li>
+                        <li>Seguridad y Análisis de Riesgos.</li>
+                        <li>Observabilidad.</li>
+                        <li>Monitoreo y vigilancia inteligente.</li>
+                        <li>Solución de control de accesos y Autentificación Biométrica.</li>
+                    </ul>
+                    <a href="contacto.html" class="btn primary">Ver Soluciones de Seguridad</a>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/seguridad-bi.png" alt="Ilustración de seguridad de datos y analítica de negocios" class="solution-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="solution-section plain-bg reveal">
+            <div class="container grid-2-cols">
+                <div class="solution-content">
+                    <h2><i class="fa-solid fa-city"></i> 3. Soluciones de Ciudad Inteligente y Conectividad</h2>
+                    <p>Avanzamos en la creación de <strong>Smart Cities</strong> con <strong>redes de fibra óptica</strong>, <strong>asistentes virtuales</strong> y soluciones de <strong>eficiencia energética</strong> y <strong>movilidad</strong>, adaptadas a las necesidades modernas.</p>
+                    <ul class="feature-list">
+                        <li>Smart City y Soluciones de Transporte.</li>
+                        <li>Smart Fiber Network.</li>
+                        <li>Asistentes virtuales (IA Gen).</li>
+                        <li>Aplicaciones Mobile.</li>
+                        <li>Arquitectura Modular Transportable.</li>
+                        <li>Realidad Virtual Aumentada.</li>
+                        <li>Eficiencia energética y sostenibilidad.</li>
+                        <li>Innovación al servicio del Agro.</li>
+                    </ul>
+                    <a href="contacto.html" class="btn primary">Consultar Soluciones de Smart City</a>
+                </div>
+                <div class="solution-image-container">
+                    <img src="../imagenes/sector-publico.png" alt="Imagen abstracta de tótem interactivo en ciudad" class="solution-image">
+                </div>
+            </div>
+        </section>
+        
+        <div style="text-align:center; padding-top: 2.5em; padding-bottom: 4em;">
+          <a href="tecnologia.html" class="btn secondary large-btn">Ver el Fundamento Tecnológico de estas Soluciones</a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>DocWell Company</strong> — Innovaciones que conectan, soluciones que trascienden.</p>
+            <small>&copy; 2025 DocWell Company. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-toggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+              const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+              menuBtn.setAttribute('aria-expanded', String(!expanded));
+              navLinks && navLinks.classList.toggle('show');
+            });
+        }
+        
+        // Reveal on scroll (IntersectionObserver)
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
